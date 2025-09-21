@@ -1,0 +1,155 @@
+/*
+	Intel-Themed Hero Section Styles
+	--------------------------------
+*/
+.hero {
+	/* Blue gradient background */
+	background: linear-gradient(135deg, #0071C5 0%, #00AEEF 100%);
+	min-height: 100vh; /* Full viewport height */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+}
+
+.hero-content {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+.intel-logo {
+	display: block;
+	margin: 0 auto 2rem auto;
+	width: 120px;
+	height: auto;
+}
+
+.hero-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #fff;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.hero-subheading {
+	font-size: 1.25rem;
+	color: #e0f4ff;
+	margin-bottom: 0;
+	text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+/*
+	Timeline Cards Section Styles
+	----------------------------
+*/
+.timeline-section {
+	background: #f5faff;
+	padding: 2rem 0 1rem 0;
+}
+
+.timeline-cards {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+	overflow-x: auto;
+	padding: 1rem 1rem 2rem 1rem;
+	scroll-behavior: smooth;
+}
+
+.timeline-card {
+	background: #fff;
+	border-radius: 18px;
+	box-shadow: 0 4px 16px 0 rgba(0,113,197,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.06);
+	min-width: 260px;
+	max-width: 300px;
+	flex: 0 0 260px;
+	padding: 1.5rem 1rem 1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.5s cubic-bezier(.4,2,.3,1), box-shadow 0.3s, background 0.3s, color 0.3s;
+	border-top: 5px solid #0071C5;
+	will-change: transform;
+	perspective: 600px;
+}
+
+.timeline-card:hover {
+	/* 3D flip effect */
+	transform: translateY(-6px) scale(1.03) rotateY(13deg);
+	background: #0071C5;
+	color: #fff;
+	box-shadow: 0 12px 36px 0 rgba(0,113,197,0.30), 0 4px 16px 0 rgba(0,0,0,0.18);
+	border-top: 5px solid #00AEEF;
+}
+
+/* Make all text inside the card white on hover */
+.timeline-card:hover h2,
+.timeline-card:hover h3,
+.timeline-card:hover p {
+	color: #fff;
+	transition: color 0.3s;
+}
+
+/* Optional: Make image pop a bit on hover */
+.timeline-card:hover .timeline-img {
+	box-shadow: 0 4px 16px 0 rgba(0,174,239,0.25);
+	transition: box-shadow 0.3s;
+}
+
+.timeline-img {
+	width: 100%;
+	max-width: 220px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 8px 0 rgba(0,113,197,0.08);
+}
+
+.timeline-card h2 {
+	color: #0071C5;
+	font-size: 1.3rem;
+	margin: 0.5rem 0 0.2rem 0;
+	font-weight: bold;
+}
+
+.timeline-card h3 {
+	color: #00AEEF;
+	font-size: 1.1rem;
+	margin: 0 0 0.5rem 0;
+	font-weight: 600;
+}
+
+.timeline-card p {
+	color: #222;
+	font-size: 1rem;
+	margin: 0;
+	text-align: center;
+}
+
+.timeline-instructions {
+	text-align: center;
+	color: #0071C5;
+	font-size: 1rem;
+	margin: 1rem 0 2rem 0;
+}
+
+/* Responsive: Stack timeline cards vertically on small screens */
+@media (max-width: 768px) {
+	.timeline-cards {
+		flex-direction: column;
+		gap: 2rem;
+		overflow-x: visible;
+		align-items: center;
+	}
+	.timeline-card {
+		min-width: 90vw;
+		max-width: 95vw;
+		width: 100%;
+	}
+}
+/* Add your CSS here */
