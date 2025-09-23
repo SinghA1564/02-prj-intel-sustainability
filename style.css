@@ -1,3 +1,20 @@
+/* Show more detail and hide image/summary on hover */
+.timeline-detail {
+	display: none;
+	color: #fff;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	text-align: left;
+}
+
+.timeline-card:hover .timeline-img,
+.timeline-card:hover .timeline-summary {
+	display: none;
+}
+
+.timeline-card:hover .timeline-detail {
+	display: block;
+}
 /*
 	Intel-Themed Hero Section Styles
 	--------------------------------
